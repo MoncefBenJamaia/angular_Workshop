@@ -20,7 +20,7 @@ export class ListUserComponent {
   delete(i :number){
     this.userservice.deleteUser(i).subscribe(()=>{
       alert("user deleted");
-      this.Router.navigate(["users"]);
+      this.Router.navigate(["/users"]);
     });
 
   }

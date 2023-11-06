@@ -19,15 +19,15 @@ user:User = {
 add(F:NgForm){
   const id=new Date().getTime();
   const newUser:User={
-    idCustomer: id,
+    id: id,
     firstName: F.value.fn,
     lastName: F.value.ln,
     birthDate: F.value.date,
     accountCategory: F.value.category,
     email: F.value.email,
-    password: F.value.passwoord,
+    password: F.value.password,
     picture: "https://bootdey.com/img/Content/avatar/avatar5.png",
-    profession: F.value.profession
+    profession: F.value.Profession
   }
   this.userS.addUser(newUser).subscribe(()=>{
     alert("user added");

@@ -21,16 +21,20 @@ export class UserService {
 
 
   getUserById(id:number){
-
+    return this.http.get<User>(this.url+'/'+id);
   }
 
   addUser(u:User){
-    return this.http.post(this.url+"add-user",u);
+    return this.http.post(this.url,u);
   }
 
-  updateUser(id:number, u:User){}
+  updateUser(u:User){
+    let id : number=u.id;
+
+    return this.http.post(this.url +'/'+ id,u);
+  }
 
   deleteUser(id:number){
-    return this.http.delete(this.url+"users/{id}");
+    return this.http.delete(this.url+'/'+ id);
   }
 }

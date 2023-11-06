@@ -26,12 +26,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "C:/Users/ASUS/OneDrive/Bureau/FirstApp/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "C:/Users/ASUS/OneDrive/Bureau/FirstApp/node_modules/jquery/dist/jquery.slim.min.js",
-              "C:/Users/ASUS/OneDrive/Bureau/FirstApp/node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "C:/Users/ASUS/OneDrive/Bureau/FirstApp/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/jquery/dist/jquery.slim.min.js",
+              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

@@ -52,7 +52,7 @@
                       <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
                     </span>
                   </a>
-                  <a [routerLink]="['editUser',item.idCustomer]" class="table-link">
+                  <a [routerLink]="['editUser',item.id]" class="table-link">
                     <span class="fa-stack">
                       <i class="fa fa-square fa-stack-2x"></i>
                       <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
@@ -60,7 +60,7 @@
                   </a>
                   
                   <!-- Utilisez *ngIf pour rendre le bouton "Delete" inactif si item.accountCategory est "Admin" -->
-                  <button class="table-link danger" [disabled]="item.accountCategory == 'Admin' " (click)="delete(item.idCustomer)">
+                  <button class="table-link danger" [disabled]="item.accountCategory == 'Admin' " (click)="delete(item.id)">
                     <span class="fa-stack">
                       <i class="fa fa-square fa-stack-2x"></i>
                       <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
