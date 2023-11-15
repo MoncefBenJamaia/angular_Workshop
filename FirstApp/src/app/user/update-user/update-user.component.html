@@ -1,8 +1,8 @@
 <p>update-user works!</p>
-<form class="form-group"  (ngSubmit)="update" [formGroup]="updateForm" *ngIf="updateForm">
+<form class="form-group" [formGroup]="updateForm" *ngIf="updateForm">
     
 <label> FirstName</label>
-<input type="text" class="form-control" id="fn" name="firstName" formControlName="firstName" > 
+<input type="text" class="form-control" id="fn" name="firstName" formControlName="firstName"> 
 <!-- <small class="text-danger" *ngIf="fn?.errors?.['required'] && fn.touched " >name is required </small>
 <small class="text-danger" *ngIf="fn?.errors?.['minlength'] && fn.touched " > Name must be at least 3 cara</small>
 <small class="text-danger" *ngIf="fn?.errors?.['pattern'] && fn.touched " > !!!!</small> -->
@@ -42,7 +42,13 @@
             <input type="text" class="form-control" id="category" readonly value="Customer" name="accountCategory"  formControlName="accountCategory"> 
             
             </div>
-    <div>
-     <button type="submit" class="btn btn-primary" >Submit</button>
-    </div>
+            <label for="skills">Skills</label>
+            <div formArrayName="skills" id="skills">
+              <button type="button" class="btn btn-primary" (click)="addskills()">Add Skills</button>
+              <div *ngFor="let skill of skills.controls; let i=index">
+                <input type="text" id="skill-{{i}}" class="form-control" name="skill-{{i}}" [formControlName]="i">
+              </div>
+            </div>
+            <br>
+     <button type="text" class="btn btn-primary" >Submit</button>
 </form>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FirstApp": {
+    "myfirstproject": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/first-app",
+            "outputPath": "dist/myfirstproject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -26,12 +26,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/jquery/dist/jquery.slim.min.js",
-              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "C:/Users/ASUS/OneDrive/Bureau/angular_Workshop/FirstApp/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/jquery/dist/jquery.slim.js"
             ]
           },
           "configurations": {
@@ -65,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FirstApp:build:production"
+              "browserTarget": "myfirstproject:build:production"
             },
             "development": {
-              "browserTarget": "FirstApp:build:development"
+              "browserTarget": "myfirstproject:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FirstApp:build"
+            "browserTarget": "myfirstproject:build"
           }
         },
         "test": {
@@ -101,6 +100,6 @@
     }
   },
   "cli": {
-    "analytics": "a2ea6aad-1ba2-407d-9a3f-93f2ce0998d5"
+    "analytics": "2f6a2160-0fbe-46ea-81b1-6c47999c3583"
   }
 }
