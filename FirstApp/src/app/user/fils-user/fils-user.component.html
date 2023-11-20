@@ -1,0 +1,41 @@
+<table>
+<tbody>
+<tr>
+    <td>
+      <img [src]="item.picture">
+      <a href="#" class="user-link">{{item.firstName}} {{item.lastName}}</a>
+      <span class="user-subhead">{{item.profession}}</span>
+    </td>
+    <td>{{item.birthDate}}</td>
+    <td class="text-center">
+      <span class="label label-default">Inactive</span>
+    </td>
+    <td>
+      <a href="#">{{item.email}}</a>
+    </td>
+    <td style="width: 20%;">
+      <a href="#" class="table-link">
+        <span class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      <a [routerLink]="['editUser',item.id]" class="table-link">
+        <span class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      
+      <!-- Utilisez *ngIf pour rendre le bouton "Delete" inactif si item.accountCategory est "Admin" -->
+      <button class="table-link danger" [disabled]="item.accountCategory == 'Admin' " (click)="send(item.id)">
+        <span class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+        </span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+<ng-content></ng-content>
+

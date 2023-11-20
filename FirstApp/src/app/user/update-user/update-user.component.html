@@ -1,6 +1,6 @@
 <p>update-user works!</p>
-<form class="form-group" [formGroup]="updateForm" *ngIf="updateForm">
-    
+<form [formGroup]="updateForm" (ngSubmit)="update()" *ngIf="updateForm">
+   <div class="form-group" >
 <label> FirstName</label>
 <input type="text" class="form-control" id="fn" name="firstName" formControlName="firstName"> 
 <!-- <small class="text-danger" *ngIf="fn?.errors?.['required'] && fn.touched " >name is required </small>
@@ -51,4 +51,5 @@
             </div>
             <br>
      <button type="text" class="btn btn-primary" >Submit</button>
+    </div> 
 </form>

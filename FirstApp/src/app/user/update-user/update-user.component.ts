@@ -13,9 +13,10 @@ export class UpdateUserComponent implements OnInit {
   id!: number;
   user !:User;
   // updateForm !: FormGroup;
+  constructor(private avtR: ActivatedRoute, private userS : UserService ,private R:Router , private FormB: FormBuilder) { }
   updateForm = this.FormB.group({
     id:[0],
-    firstName : ['',Validators.required,Validators.minLength(3)],
+    firstName : [''],
     lastName :[''],
     birthDate: [''],
     email: [''],
@@ -23,11 +24,15 @@ export class UpdateUserComponent implements OnInit {
     profession: [''],
     accountCategory : [''],
     picture : [''],
-    skills:this.FormB.array([['',Validators.minLength(3)], ['', Validators.minLength(3)]])
+    skills:this.FormB.array([new FormControl('',Validators.minLength(3)), new FormControl('',Validators.minLength(3))])
   })
-  constructor(private avtR: ActivatedRoute, private userS : UserService ,private R:Router , private FormB: FormBuilder) { }
   
- 
+  
+  getParam() {
+    this.avtR.paramMap.subscribe(data => {this.id = Number(data.get('id'));
+
+    });
+  }
   
   ngOnInit(): void {
     this.getParam();
@@ -54,11 +59,7 @@ get skills(){
 addskills(){
     this.skills.push(new FormControl('',Validators.minLength(3)));
 }
-  getParam() {
-    this.avtR.paramMap.subscribe(data => {this.id = Number(data.get('id'));
-
-    });
-  }
+ 
 
   update(){
 
