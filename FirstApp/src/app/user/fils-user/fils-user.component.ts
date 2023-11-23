@@ -18,4 +18,7 @@ export class FilsUserComponent {
 send(id: number){
   this.sender.emit(id);
 }
+showCurrentUser(){
+  alert(this.item.firstName);
+}
 }

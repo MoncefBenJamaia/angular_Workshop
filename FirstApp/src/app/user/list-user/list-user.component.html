@@ -32,7 +32,8 @@
               </tr>
             </thead>
             <tbody *ngFor="let item of list">
-              <app-fils-user [item]="item" (sender)="delete($event)"></app-fils-user>
+              <tr><button (click)="fils.showCurrentUser()">Current User</button></tr>
+              <app-fils-user #fils [item]="item" (sender)="delete($event)"></app-fils-user>
             </tbody>
           </table>
         </div>
